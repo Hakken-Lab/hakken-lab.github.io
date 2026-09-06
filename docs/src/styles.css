@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Murecho:wght@100..900&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Murecho", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 20px;
+  padding: 0;
+  color:#003
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+a {
+  color: #3b88f2;
+  &:visited {
+    color:#393c7d;
+  }
+  &:hover {
+    color: #4ac6ff;
+  }
+  &:active {
+    color: #3b6baf;
+  }
+}
+
+hr {
+  border-color:rgba(110, 110, 110, 0.8);
+  border-style:dashed;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  opacity: 1.0;
+  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+  scrollbar-color: rgb(255, 213, 65) rgb(49, 72, 145);
+  word-break: auto-phrase;
+}
+
+@keyframes grid-scroll {
+  0% {
+    background-position: -160px -80px
+  }
+}
+
+.bg-vignette {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: -11;
+  background: radial-gradient(circle, rgba(70, 149, 202, 1) 2%, rgba(49, 72, 145, 1) 100%);
+}
+
+.bg-grid-container {
+  position:fixed;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
+}
+
+.bg-grid {
+  opacity: 50%;
+  background-image:
+    linear-gradient(#393c7d 1px, transparent 1px),
+    linear-gradient(to right, #393c7d 1px, transparent 1px);
+  background-size: 80px 80px;
+  background-repeat: repeat;
+  background-position: 0px 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  animation: grid-scroll forwards 16s infinite;
+  animation-timing-function: linear;
+}
+
+body {
+  font-family: Optimistic Text, -apple-system, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+ruby {
+  ruby-position: over;
+}
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.visible {
+  overflow: visible;
+}
+
+.fit {
+  width: fit-content;
+}
+/* App */
+
+hakken-app {
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  user-select: none;
+  -drag: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.logo-container {
+  min-width: 400px;
+  max-width: 600px;
+  width: 80vw;
+  height: auto;
+  filter:drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.5));
+}
+
+.window-body {
+  width: 90vw;
+  min-width: 400px;
+  max-width: 800px;
+  /* max-height: 80vh; */
+  corner-shape: bevel;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8vh;
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+  border-left-width: 10px;
+  border-right-width: 10px;
+  border-color:rgb(255, 213, 65);
+  border-style:solid;
+  background-color:rgba(245, 245, 245, 0.6);
+}
+
+.page-root {
+  width:100vw;
+  padding: 20px 20px 20px 20px;
+}
+
+hakken-lang-selector {
+  position: fixed;
+  right: calc(30px + 100% - 100vw);
+  bottom: 10px;
+  z-index: 100;
+}
+
+hakken-lang-selector > .dropdown-trigger {
+  padding: 12px 20px;
+  background: rgba(59, 136, 242, 0.8);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  corner-shape: bevel;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+hakken-lang-selector > .dropdown-trigger:hover {
+  background: rgba(74, 198, 255, 0.8);
+}
+
+hakken-lang-selector > .arrow {
+  transition: transform 0.3s ease;
+}
+
+hakken-lang-selector:hover .arrow {
+  transform: rotate(180deg);
+}
+
+hakken-lang-selector > .dropdown-menu {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  width: 100%;
+  min-width: 8rem;
+  background: white;
+  border-radius: 10px;
+  corner-shape: bevel;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 0 8px;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+hakken-lang-selector > .dropdown-menu li {
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+hakken-lang-selector:hover > .dropdown-menu {
+  max-height: 300px;
+  padding: 8px 8px;
+  border-color: #e1e5e9;
+}
+
+hakken-lang-selector:hover > .dropdown-menu li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+hakken-lang-selector input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  display: none;
+  &:hover + label {
+    cursor:pointer;
+    background: #dadada;
+    color: #667eea;
+  }
+  &:checked + label {
+    cursor:default;
+    background: #c0e9ff;
+    color: #4c99d8;
+  }
+}
+
+hakken-lang-selector label {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  corner-shape: bevel;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+hakken-page {
+  overflow: hidden;
+  width: 100%;
+}
+
+.folder-nav {
+  display:flex;
+  flex-direction: row;
+  align-items: start;
+  justify-items: start;
+  width: 90vw;
+  min-width: 400px;
+  max-width: 800px;
+  height: auto;
+}
+
+/* HTML: <div class="slanted-edge"></div> */
+/* .folder-tab {
+} */
+
+.folder-nav input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  margin: 0;
+}
+
+.folder-nav label {
+  user-select: none;
+}
+
+@property --nav-tab-height {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0px;
+}
+
+.folder-nav input[type="radio"] + label {
+  --p: 20px; /* control the shape (can be percentage) */
+  --nav-tab-height: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50px;
+  height: 50px;
+  /* padding-top: calc(-1.0 * var(--nav-tab-height)); */
+  /* transform: translateY(var(--nav-tab-height)); */
+  aspect-ratio: 1;
+  clip-path: polygon(
+    0 calc(var(--nav-tab-height) + var(--p) * 0.5),
+    calc(var(--p) * 0.5) calc(var(--nav-tab-height)),
+    calc(100% - var(--p)) calc(var(--nav-tab-height)),
+    calc(100% - var(--p) * 0.5) calc(var(--nav-tab-height) + var(--p) * 0.5),
+    calc(100% - var(--p) * 0.5) calc(100% - var(--p) * 0.25),
+    calc(100%) calc(100% + 1px),
+    0 calc(100% + 1px));
+  background:rgb(150, 150, 150);
+  padding-left: 10px;
+  padding-top: calc(10px + var(--nav-tab-height));
+  transition-property: all;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+  cursor: pointer;
+  
+}
+
+.folder-nav input[type="radio"]:hover + label {
+  --nav-tab-height: 0px;
+  padding-top: 15px;
+  font-size: 20px;
+  background:rgb(160, 223, 255);
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+}
+
+.folder-nav input[type="radio"]:checked + label{
+  --nav-tab-height: 0px;
+  padding-top: 15px;
+  font-size: 20px;
+  background:rgb(255, 213, 65);
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+  cursor: default;
+}
+
+.page {
+  padding: 0px 10px;
+  --transition-duration: 0.5s;
+  width: 100%;
+  min-height: 100px;
+  background-color:rgb(255, 213, 65, 1.0);
+  display: grid;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  grid-template-rows: 0fr;
+  transition-property: all;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: ease-in-out;
+
+  outline-color:rgb(255, 213, 65);
+  outline-style:solid;
+  corner-shape: bevel;
+  outline-width: 20px;
+  outline-offset: 0px;
+  border-radius: 10px;
+  border-width: 10px;
+
+  &[loaded] {
+    grid-template-rows: 1fr;
+    background-color:transparent;
+  }
+  & > .content {
+    min-height: 0;
+    opacity: 0;
+    transition-property: opacity;
+    transition-delay: calc(var(--transition-duration) * 0.5);
+    transition-duration: calc(var(--transition-duration) * 0.5);
+    transition-timing-function: ease-out;
+  }
+  &[loaded] > .content {
+    opacity: 1;
+  }
+}
+
+iframe {
+  width:100%;
+  max-height: 60vw;
+  corner-shape: bevel;
+  border-radius: 10px;
+}
+
+div.linkset {
+  corner-shape:bevel;
+  border-radius: 10px;
+  background-color: rgba(249, 163, 27, 0.8);
+  padding:10px;
+  margin-bottom: 20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  & > * {
+    padding:10px;
+    corner-shape:bevel;
+    border-radius: 10px;
+    background-color: rgba(255, 213, 65, 0.6);
+  }
+}
